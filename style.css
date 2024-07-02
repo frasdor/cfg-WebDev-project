@@ -1,5 +1,10 @@
-* {box-sizing:border-box}
-
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -12,6 +17,15 @@ body {
   background-attachment: fixed;
 }
 
+
+#wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: white;
+  flex: 1;
+  padding-bottom: 40px;
+}
+
 header {
   text-align: center;
   background: #f5f5f5;
@@ -20,60 +34,55 @@ header {
 
 header img {
   max-width: 100%;
-  height: auto;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; 
 }
+
 
 header h1 {
   margin-top: 20px;
   font-size: 2.5rem;
   color: #444;
+  
 }
 
-/* navigation*/
+
+/* /* navigation*/
 nav {
   position: sticky;
-}
-
+  color:#fff; 
+} 
 .navbar {
   margin-bottom: 0;
   margin-top: 0;
   border: none;
   border-radius: 0;
   background-color: rgb(14, 54, 28);
-    
+  color:#fff;
 }
-
-.navbar-default .navbar-nav > li > a {
-  color: #555;
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li.active > a {
-  color: #333;
-  background-color: #eee;
-}
-
-.navbar-form {
-  margin: 10px 0;
-}
-
-.navbar-form .form-control {
-  width: auto;
-}
-
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
   margin: auto;
+  max-width: 1000px;
+  max-height: 750px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+ /*  max-width: 1000px;
+  position: relative;
+  margin: auto; */
 }
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+  display:none;
 }
 .mySlides img {
   width: 100%;
+  height: 500px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the container */
   border-radius: 5px;
 }
 
@@ -102,6 +111,8 @@ nav {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  color: green;
+  text-decoration: none;
 }
 
 /* Caption text */
@@ -162,8 +173,9 @@ nav {
   display: table;
   clear: both;
 }
-/*footer*/
 
+
+/*footer*/
 footer {
   background-color: #333;
   color: #fff;
