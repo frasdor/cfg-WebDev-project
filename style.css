@@ -15,7 +15,6 @@ body {
   background-color: #f9f9f9;
   color: #333;
   background-attachment: fixed;
-  color: #444;
 }
 
 
@@ -24,8 +23,7 @@ body {
   margin: 0 auto;
   background-color: white;
   flex: 1;
-  padding: 20px 40px;
-
+  padding-bottom: 40px;
 }
 
 header {
@@ -39,13 +37,12 @@ header img {
   max-height:auto;
   height: auto; 
   aspect-ratio: 3;
-
   object-fit: cover; 
 }
 
 
 header h1 {
-  margin: 42px 0 42px;
+  margin-top: 20px;
   color: #444;
   
 }
@@ -55,17 +52,16 @@ section {
   border-bottom: 1px solid #ccc;
 }
 h2 {
-  margin-top: 20px;
-  margin-bottom: 42px;
+  /* margin-top: 20px;
+  margin-bottom: 42px; */
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline;
 }
 h3 {
-  
-  text-align: center;
+    text-align: center;
 }
 
-/* /* navigation*/
+ /* navigation*/
 nav {
   position: sticky;
   color:#fff; 
@@ -197,18 +193,40 @@ nav {
   from {opacity: .4}
   to {opacity: 1}
 }
-
 .column {
   float: left;
-  width: 50%;
-  padding: 10px 20px;
-}
+  max-width: 500px;
+  padding: 10px;
+ }
 
-.row:after {
+ .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
+.header_contact {
+  text-align: center;
+  padding: 10px;
+}
+
+.row {
+  max-width: 1400px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: column;
+ }
+
+ .contant-intro {
+  text-align: center;
+}
+
+.fcf-input-group {
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+ 
 .btn.btn-success {
   background-color: rgb(14, 54, 28);
 }
